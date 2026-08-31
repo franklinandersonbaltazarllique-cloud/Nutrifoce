@@ -76,19 +76,6 @@ src/
 - Node.js 18 o superior.
 - npm 9 o superior.
 
-## Publicación en GitHub
-
-Después de crear un repositorio vacío en GitHub, configura el remoto y sube el código:
-
-```bash
-git init
-git add .
-git commit -m "feat: create Nutriforce landing page"
-git branch -M main
-git remote add origin URL_DEL_REPOSITORIO
-git push -u origin main
-```
-
 ## Alcance actual
 
 Este repositorio contiene únicamente la interfaz frontend. Los enlaces de contacto dirigen a servicios externos y el código QR utiliza un recurso gráfico local. No se implementan autenticación, gestión de usuarios, pagos, inventario ni persistencia de datos.
