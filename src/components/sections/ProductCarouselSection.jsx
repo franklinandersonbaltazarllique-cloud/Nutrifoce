@@ -12,14 +12,14 @@ export default function ProductCarouselSection() {
   const next = () => setCurrent((value) => (value + 1) % total)
 
   return (
-    <section id="productos" className="overflow-hidden bg-white px-6 py-24">
+    <section id="productos" className="overflow-hidden bg-white px-4 py-16 sm:px-6 sm:py-24">
       <div className="mx-auto max-w-6xl">
-        <div className="mb-14 text-center">
+        <div className="mb-10 text-center sm:mb-14">
           <SectionBadge>Nuestros Sabores</SectionBadge>
-          <h2 className="mb-4 text-5xl font-black leading-tight tracking-tight md:text-6xl" style={{ color: '#33691E' }}>
+          <h2 className="mb-4 text-4xl font-black leading-tight tracking-tight sm:text-5xl md:text-6xl" style={{ color: '#33691E' }}>
             5 Variedades, <span className="font-light italic" style={{ fontFamily: 'Lora, Georgia, serif', color: '#7CB342' }}>una sola energía</span>
           </h2>
-          <p className="text-lg font-semibold" style={{ color: '#8BC34A' }}>elige tu sabor favorito</p>
+          <p className="text-base font-semibold sm:text-lg" style={{ color: '#8BC34A' }}>elige tu sabor favorito</p>
         </div>
 
         <div className="relative flex flex-col items-center">
@@ -39,11 +39,11 @@ export default function ProductCarouselSection() {
             ))}
           </div>
 
-          <div className="flex w-full items-center justify-center gap-4 md:gap-6">
+          <div className="flex w-full items-center justify-center gap-2 sm:gap-4 md:gap-6">
             <button
               onClick={prev}
               aria-label="Producto anterior"
-              className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border-2 text-lg font-black transition-all duration-200 hover:-translate-x-1 hover:shadow-md md:h-14 md:w-14"
+              className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 text-lg font-black transition-all duration-200 hover:-translate-x-1 hover:shadow-md sm:h-12 sm:w-12 md:h-14 md:w-14"
               style={{ borderColor: currentProduct.accent, color: currentProduct.accent, background: `${currentProduct.accent}10` }}
             >
               ←
@@ -54,23 +54,23 @@ export default function ProductCarouselSection() {
             <button
               onClick={next}
               aria-label="Producto siguiente"
-              className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border-2 text-lg font-black transition-all duration-200 hover:translate-x-1 hover:shadow-md md:h-14 md:w-14"
+              className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full border-2 text-lg font-black transition-all duration-200 hover:translate-x-1 hover:shadow-md sm:h-12 sm:w-12 md:h-14 md:w-14"
               style={{ borderColor: currentProduct.accent, color: currentProduct.accent, background: `${currentProduct.accent}10` }}
             >
               →
             </button>
           </div>
 
-          <div className="mt-4 flex items-center rounded-full px-5 py-2 text-sm font-bold" style={{ background: '#F1F8E9', color: '#558B2F' }}>
+          <div className="mt-4 flex items-center rounded-full px-4 py-2 text-xs font-bold sm:px-5 sm:text-sm" style={{ background: '#F1F8E9', color: '#558B2F' }}>
             {current + 1} / {total}
           </div>
 
-          <div className="mt-6 flex gap-3">
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
             {products.map((product, index) => (
               <button
                 key={product.id}
                 onClick={() => setCurrent(index)}
-                className="h-14 w-14 overflow-hidden rounded-2xl border-2 transition-all duration-200"
+                className="h-12 w-12 overflow-hidden rounded-2xl border-2 transition-all duration-200 sm:h-14 sm:w-14"
                 style={{
                   borderColor: index === current ? product.accent : 'transparent',
                   opacity: index === current ? 1 : 0.5,
@@ -83,9 +83,9 @@ export default function ProductCarouselSection() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-wrap justify-center gap-3">
+        <div className="mt-10 flex flex-wrap justify-center gap-2 sm:mt-12 sm:gap-3">
           {['✅ 25g Peso Neto', '🚫 Sin Conservantes', '⚡ Energía Instantánea', '💊 Fortificado con Vitaminas'].map((tag) => (
-            <span key={tag} className="rounded-full border px-4 py-2 text-[11px] font-semibold" style={{ color: '#558B2F', borderColor: '#DCEDC8', background: '#F9FBE7' }}>
+            <span key={tag} className="rounded-full border px-3 py-2 text-[10px] font-semibold sm:px-4 sm:text-[11px]" style={{ color: '#558B2F', borderColor: '#DCEDC8', background: '#F9FBE7' }}>
               {tag}
             </span>
           ))}

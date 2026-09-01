@@ -33,4 +33,21 @@ body {
 	font-family: 'Montserrat', sans-serif;
 	background: #ffffff;
 	color: #1B5E20;
+	overflow-x: hidden;
+}
+
+img,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+@media (max-width: 640px) {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		font-size: 15px;
+	}
 }

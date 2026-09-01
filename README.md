@@ -17,15 +17,24 @@ El proyecto está enfocado en frontend. Incluye navegación por secciones, prese
 
 ## Características técnicas
 
-- Diseño responsive para dispositivos móviles, tablets y escritorio.
-- Componentes reutilizables organizados por responsabilidad.
+- Diseño responsive.
+- Componentes organizados por responsabilidad.
 - Carrusel interactivo implementado con `useState` de React.
-- Importación optimizada de imágenes locales mediante Vite.
-- Navegación interna mediante anclas HTML.
 - Animaciones CSS para la imagen principal y transición de tarjetas.
 - Datos de productos, ingredientes y redes sociales separados de la vista.
-- Configuración de Tailwind CSS mediante el plugin oficial para Vite.
 - Validación de código con ESLint.
+
+## SEO y visibilidad digital implementados
+Se incorporaron prácticas de optimización para posicionamiento y redes sociales con el objetivo de mejorar la presencia del sitio en buscadores y contenido compartido.
+
+- Meta title y meta description en español para posicionamiento en buscadores.
+- Keywords relevantes para Nutriforce, Enercorn y el mercado peruano.
+- Open Graph configurado para compartir la landing page en redes sociales.
+- Twitter Cards configuradas con vista previa de imagen y contenido promocional.
+- Imagen de previsualización recomendada para redes.
+- Archivos `robots.txt` y `sitemap.xml` creados para indexación de buscadores.
+- Script de Google Tag Manager agregado para análisis y seguimiento.
+- Pixel de TikTok incorporado para medición de eventos y campañas.
 
 ## Estructura del proyecto
 
